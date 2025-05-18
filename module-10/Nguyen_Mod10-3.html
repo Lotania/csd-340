@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="Nguyen_Mod10-3.css">
+		<title>CSD 340 Web Development with HTML and CSS</title>
+		
+	</head>
+	<body>
+		
+		<h1>Assignment 10.3: JavaScript - Part 2</h1>
+		<h2>50/50 Edition</h2>
+		
+		<br />
+		
+		<div>
+			<a
+				onmouseover="q1.src='flower.jpg';"
+				onmouseout= "q1.src='question.jpg';"
+				onclick="imgClick()"
+			>
+				<img border = 0 name = "q1" src = "question.jpg">
+			</a>
+		</div>
+		<br />
+		<div
+			onmouseover="this.style.color='red';"
+			onmouseout= "this.style.color='black';">
+			
+			Sunflower in a meadow? Or dead soldier in a desert?
+			Run your mouse over the image to find out.
+			Or click the image for a useless surprise.
+		</div>
+		
+		<br />
+		<br />
+		
+		<div>
+			<a
+				onmouseover="q2.src='oink.jpg';"
+				onmouseout= "q2.src='question.jpg';"
+			>
+				<img border = 0 name = "q2" src = "question.jpg">
+			</a>
+		</div>
+		<br />
+		<div
+			onmouseover="this.style.color='red';"
+			onmouseout= "this.style.color='black';"
+			onclick="imgClick()"
+		>
+			
+			Three cupcakes on a window sill? Or three pig heads on a table?
+			Run your mouse over the image to find out.
+			Or click the image for a useless surprise.
+		</div>
+		
+		<br />
+		<br />
+		
+		<script>
+			function imgClick(url){
+				window.location.href = "https://theuselessweb.com/";
+			}
+		</script>
+		
+		<div id="footer">
+			<div id="landing">
+				<p><a href="../index.html">Back to Landing Page</a></p>
+			</div>
+		</div>
+		<br />
+		<br />
+	</body>
+</html>
