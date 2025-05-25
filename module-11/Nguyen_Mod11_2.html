@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSD 340 Web Development with HTML and CSS</title>
+	</head>
+	<body>
+		
+		<h1>Assignment 11.2: JavaScript - Part 3</h1>
+		
+		<p>TO DO LIST - Add items, delete specific item, display items</p>
+		
+		<label for="toedit">To Edit: </label>
+		<input type="text" id="toedit" name="toedit">
+		<button type="button" id="add" onclick="storeInput()">Add</button>
+		<button type="button" id="delete" onclick="deleteInput()">Delete</button>
+		<button type="button" id="display" onclick="displayInput()">Display</button>
+		
+		<hr>
+		
+		<p>
+			<ul id="list" style="list-style-type: none;"></ul>
+		</p>
+		
+		<br>
+		<div id="landing">
+			<p><a href="../index.html">Back to Landing Page</a></p>
+		</div>
+		
+		<script>
+			let array = [];
+			
+			function storeInput(){
+				const input1 = document.getElementById("toedit");
+				const value1 = input1.value;
+				array.push(value1);
+				let str = value1 + " has been added to the list";
+				alert(str);
+				input1.value = "";
+			}
+			
+			function deleteInput(){
+				const input1 = document.getElementById("toedit");
+				const value1 = input1.value;
+				array = array.filter(item => item !== value1);
+				let str = value1 + " has been removed from the list";
+				alert(str);
+				input1.value = "";
+			}
+			
+			function displayInput(){
+				let list = document.getElementById("list");
+				list.innerHTML = "";
+				for (i = 0; i < array.length; ++i){
+					let li = document.createElement('li');
+					li.innerText = "Item " + (i+1) + ": " + array[i];
+					list.appendChild(li);
+				}
+			}
+			
+		</script>
+		
+	</body>
+</html>
