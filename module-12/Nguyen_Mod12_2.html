@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="Nguyen_Mod3_3.css">
+		<title>CSD 340 Web Development with HTML and CSS</title>
+	</head>
+	<body>
+		
+		<script>
+			const array = ["The Natural Medicine Guide to Autism","5/3/1: The Simplest and Most Effective Training System for Raw Strength","Olympic Weightlifting: A Complete Guide for Athletes & Coaches","Maximum Ride: The Angel Experiment","The Monuments Men: Allied Heroes, Nazi Thieves, and the Greatest Treasure Hunt in History","The Colony: The Harrowing True Story of the Exiles of Molokai","Infinite Stratos (light novel series)","Around the World in 80 Days","The Man Who Would Be King","The Maze Runner"];
+			
+			function topbottom(){
+				let list = document.getElementById("list");
+				list.innerHTML = "";
+				for (i = 0; i < array.length; ++i){
+					let li = document.createElement('li');
+					li.innerText = (i+1) + ": " + array[i];
+					list.appendChild(li);
+				}
+			}
+			
+			function bottomtop(){
+				let list = document.getElementById("list");
+				list.innerHTML = "";
+				for (i = array.length - 1; i >=0; i--){
+					let li = document.createElement('li');
+					li.innerText = (i+1) + ": " + array[i];
+					list.appendChild(li);
+				}
+			}
+			
+		</script>
+		
+		<div id="container">
+			<h1>Assignment 12.2: JavaScript - Part 4</h1>
+			<div id="side1">
+				<h3>Top 10 Favorite Books</h3>
+				<button type="button" id="topom" onclick="topbottom()">Top to Bottom</button>
+				<button type="button" id="bottop" onclick="bottomtop()">Bottom to Top</button>
+				<hr>
+				<ol id="list" style="list-style-type: none;">
+				</ol>
+			</div>
+			<div id="side2">
+				<h3>5 Things I’ve Learned Since the Course Started</h3>
+				<ul type="I">
+					<li>How to div a div</li>
+					<li>CSS Styling: Dos and Don'ts</li>
+					<li>HTML is repetition with variations</li>
+					<li>The hierarchy of attributes</li>
+					<li>GitHub will never not be a pain</li>
+				</ul>
+			</div>
+			<div id="landing">
+				<p><a href="../index.html">Back to Landing Page</a></p>
+			</div>
+		</div>
+	</body>
+</html>
